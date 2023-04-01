@@ -1,3 +1,4 @@
+import 'package:amar_institute/widgets/button_.dart';
 import 'package:amar_institute/widgets/input_field.dart';
 import 'package:flutter/material.dart';
 
@@ -55,11 +56,20 @@ class _LogInPageState extends State<LogInPage> {
                   setState(() {
                     _show = !_show;
                   });
-                },),),
-            const SizedBox(
-              height: 15,
+                },
+              ),
             ),
-            ElevatedButton(onPressed: (){ButtonPress();},  child: Text("log in"))
+            const SizedBox(
+              height: 25,
+            ),
+
+            EleButton(
+              buttonName: "Log In",
+              buttonWork: (){
+                ButtonPress();
+              },
+            )
+
           ],
         ),
       ),
