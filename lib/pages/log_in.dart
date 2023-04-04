@@ -14,7 +14,7 @@ class _LogInPageState extends State<LogInPage> {
   void ButtonPress(){
     print(userController.text);
     print(passwordController.text);
-    print("change");
+    Navigator.of(context).pushReplacementNamed('/home');
   }
 
   bool _show = true;

@@ -18,7 +18,7 @@ class WelcomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text.rich(
+            const Text.rich(
               TextSpan(
                 text:"Welcome To",
                 style: TextStyle(
@@ -38,7 +38,7 @@ class WelcomePage extends StatelessWidget {
                 ]
               )
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             
             Container(
              height: 100,
@@ -46,10 +46,13 @@ class WelcomePage extends StatelessWidget {
               child: Image.asset("assets/images/logo.jpg",
               ),
             ),
-            SizedBox(height: 20,),
+
+            const SizedBox(height: 20,),
 
             EleButton(buttonName: "Sign Up", buttonWork: (){ButtonWork();} ),
-            SizedBox(height: 15,),
+
+            const SizedBox(height: 15,),
+
             EleButton(buttonName: "Log In", buttonWork: ()=> ButtonWork())
           ],
         ),

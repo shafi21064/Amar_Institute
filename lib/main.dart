@@ -1,3 +1,4 @@
+import 'package:amar_institute/pages/home.dart';
 import 'package:amar_institute/pages/log_in.dart';
 import 'package:amar_institute/pages/sign_up.dart';
 import 'package:amar_institute/pages/welcome.dart';
@@ -18,9 +19,15 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title:"Amar Institute",
-      home: WelcomePage(),
+      home: HomePage(),
+
+      // routes:  {
+      //   '/' : (context) => LogInPage(),
+      //   '/home': (context) => HomePage()
+      // },
     );
   }
 }
