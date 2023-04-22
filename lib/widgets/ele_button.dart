@@ -5,7 +5,7 @@ class EleButton extends StatelessWidget {
   String buttonName;
   final buttonWork;
 
-   EleButton({Key? key, required this.buttonName, required this.buttonWork}) : super(key: key);
+  EleButton({Key? key, required this.buttonName, required this.buttonWork}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +27,16 @@ class EleButton extends StatelessWidget {
         decoration: BoxDecoration(
           shape: BoxShape.rectangle,
           borderRadius: BorderRadius.circular(10),
-          color: Colors.lightBlue,
+          // color: Colors.lightBlue,
           border:  Border.all(color: Colors.black26, ),
-          //boxShadow:
+          gradient: const LinearGradient(
+              colors: [
+                Colors.blue,
+                Colors.lightBlueAccent,
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+          ),
         ),
 
         child: Text(

@@ -1,7 +1,9 @@
 import 'package:amar_institute/pages/home.dart';
+import 'package:amar_institute/pages/home_test.dart';
 import 'package:amar_institute/pages/log_in.dart';
 import 'package:amar_institute/pages/sign_up.dart';
 import 'package:amar_institute/pages/welcome.dart';
+import 'package:amar_institute/pages/your_result.dart';
 import 'package:amar_institute/widgets/input_field.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +25,6 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title:"Amar Institute",
       home: HomePage(),
-
       // routes:  {
       //   '/' : (context) => LogInPage(),
       //   '/home': (context) => HomePage()

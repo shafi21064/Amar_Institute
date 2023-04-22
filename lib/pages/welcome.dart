@@ -1,4 +1,4 @@
-import 'package:amar_institute/widgets/button_.dart';
+import 'package:amar_institute/widgets/ele_button.dart';
 import 'package:flutter/material.dart';
 
 class WelcomePage extends StatelessWidget {

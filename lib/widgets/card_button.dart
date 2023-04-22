@@ -27,7 +27,7 @@ CardButton({Key? key,
             Image.asset(imageIcon, height: 120,),
             Text(
               textInfo,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.black54,
                 fontWeight: FontWeight.bold,
               ),
@@ -38,3 +38,5 @@ CardButton({Key? key,
     );
   }
 }
+
+
