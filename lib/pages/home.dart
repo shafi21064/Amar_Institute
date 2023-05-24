@@ -42,17 +42,17 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Row(
+                    const Row(
                       children:[
-                        const CircleAvatar(
+                        CircleAvatar(
                           radius: 40,
                           backgroundImage:AssetImage('assets/images/download.png'),
                         ),
-                        const SizedBox (width: 10,),
+                        SizedBox (width: 10,),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
+                          children: [
                             Text(
                               'Md Shadikul Islam Shafi',
                               style: TextStyle(
@@ -102,10 +102,10 @@ class _HomePageState extends State<HomePage> {
                           CardButton(imageIcon: 'assets/images/icon_routine.png', textInfo: 'Routine'),
                           CardButton(imageIcon: 'assets/images/icon_book.png', textInfo: 'Book list.',),
                           CardButton(imageIcon: 'assets/images/icon_course.png', textInfo: 'Course structure'),
-                          CardButton(imageIcon: 'assets/images/icon_result.png', textInfo: 'Your result',),
                         ],
                       ),
                     ),
+                    CardButton(imageIcon: 'assets/images/icon_result.png', textInfo: 'Your result',),dButton(imageIcon: 'assets/images/icon_result.png', textInfo: 'Your result',),
                   ]
               ),
             ),
