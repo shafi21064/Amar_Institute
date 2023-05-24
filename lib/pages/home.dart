@@ -91,6 +91,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     const SizedBox(height: 40,),
                     Expanded(
+                      flex: 1,
                       child: GridView.count(
                         crossAxisCount: 2,
                         mainAxisSpacing: 10,
@@ -105,7 +106,9 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                     ),
-                    CardButton(imageIcon: 'assets/images/icon_result.png', textInfo: 'Your result',),dButton(imageIcon: 'assets/images/icon_result.png', textInfo: 'Your result',),
+                    Expanded(
+                      flex: 1,
+                        child: CardButton(imageIcon: 'assets/images/icon_result.png', textInfo: 'Your result',)),
                   ]
               ),
             ),
