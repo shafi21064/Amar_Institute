@@ -91,7 +91,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     const SizedBox(height: 40,),
                     Expanded(
-                      flex: 1,
+                      flex: 2,
                       child: GridView.count(
                         crossAxisCount: 2,
                         mainAxisSpacing: 10,
