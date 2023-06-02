@@ -10,7 +10,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   var textStyle = const TextStyle(
     color: Colors.white,
     fontSize: 13,
@@ -18,7 +17,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-
     var size = MediaQuery.of(context).size;
 
     return Scaffold(
@@ -29,11 +27,10 @@ class _HomePageState extends State<HomePage> {
             height: size.height * .3,
             decoration: const BoxDecoration(
                 image: DecorationImage(
-                  alignment: Alignment.topCenter,
-                  image: AssetImage('assets/images/home_header.png'),
-                  fit: BoxFit.fitWidth,
-                )
-            ),
+              alignment: Alignment.topCenter,
+              image: AssetImage('assets/images/home_header.png'),
+              fit: BoxFit.fitWidth,
+            )),
           ),
           SafeArea(
             child: Padding(
@@ -43,12 +40,15 @@ class _HomePageState extends State<HomePage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     const Row(
-                      children:[
+                      children: [
                         CircleAvatar(
                           radius: 40,
-                          backgroundImage:AssetImage('assets/images/download.png'),
+                          backgroundImage:
+                              AssetImage('assets/images/download.png'),
                         ),
-                        SizedBox (width: 10,),
+                        SizedBox(
+                          width: 10,
+                        ),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,8 +58,7 @@ class _HomePageState extends State<HomePage> {
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 15,
-                                  fontWeight: FontWeight.bold
-                              ),
+                                  fontWeight: FontWeight.bold),
                             ),
                             Text(
                               '7th sem (2nd shift)',
@@ -89,28 +88,40 @@ class _HomePageState extends State<HomePage> {
                         )
                       ],
                     ),
-                    const SizedBox(height: 40,),
+                    const SizedBox(
+                      height: 40,
+                    ),
                     Expanded(
                       flex: 2,
                       child: GridView.count(
                         crossAxisCount: 2,
                         mainAxisSpacing: 10,
-                        crossAxisSpacing:10,
+                        crossAxisSpacing: 10,
                         scrollDirection: Axis.vertical,
                         //primary: false,
                         children: [
-                          CardButton(imageIcon: 'assets/images/icon_a.png', textInfo: 'Academic info.',),
-                          CardButton(imageIcon: 'assets/images/icon_routine.png', textInfo: 'Routine'),
-                          CardButton(imageIcon: 'assets/images/icon_book.png', textInfo: 'Book list.',),
-                          CardButton(imageIcon: 'assets/images/icon_course.png', textInfo: 'Course structure'),
+                          CardButton(
+                            imageIcon: 'assets/images/icon_a.png',
+                            textInfo: 'Academic info.',
+                          ),
+                          CardButton(
+                              imageIcon: 'assets/images/icon_routine.png',
+                              textInfo: 'Routine'),
+                          CardButton(
+                            imageIcon: 'assets/images/icon_book.png',
+                            textInfo: 'Book list.',
+                          ),
+                          CardButton(
+                              imageIcon: 'assets/images/icon_course.png',
+                              textInfo: 'Course structure'),
+                          CardButton(
+                            imageIcon: 'assets/images/icon_result.png',
+                            textInfo: 'Your result',
+                          ),
                         ],
                       ),
                     ),
-                    Expanded(
-                      flex: 1,
-                        child: CardButton(imageIcon: 'assets/images/icon_result.png', textInfo: 'Your result',)),
-                  ]
-              ),
+                  ]),
             ),
           ),
         ],
