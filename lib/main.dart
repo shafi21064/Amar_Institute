@@ -3,6 +3,7 @@ import 'package:amar_institute/pages/home_test.dart';
 import 'package:amar_institute/pages/log_in.dart';
 import 'package:amar_institute/pages/sign_up.dart';
 import 'package:amar_institute/pages/splash_screen.dart';
+import 'package:amar_institute/pages/user_type_select.dart';
 import 'package:amar_institute/pages/welcome.dart';
 import 'package:amar_institute/pages/your_result.dart';
 import 'package:amar_institute/widgets/input_field.dart';
@@ -25,15 +26,14 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title:"Amar Institute",
+      home: UserTypeScreen(),
 
-      routes:  {
-        '/' : (context) => const SplashScreen(),
-        '/home': (context) => const HomePage(),
-        '/login' : (context) => const LogInPage(),
-        '/signup' : (context) => const SignUpPage(),
-
-
-      },
+      // routes:  {
+      //   '/' : (context) => const SplashScreen(),
+      //   '/home': (context) => const HomePage(),
+      //   '/login' : (context) => const LogInPage(),
+      //   '/signup' : (context) => const SignUpPage(),
+      // },
     );
   }
 }

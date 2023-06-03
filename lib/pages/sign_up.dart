@@ -10,8 +10,7 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
-
-  void ButtonPress(){
+  void ButtonPress() {
     print(userNameController.text);
     print(userRollController.text);
     print(userRegController.text);
@@ -28,7 +27,6 @@ class _SignUpPageState extends State<SignUpPage> {
 
   bool _show = false;
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,8 +35,8 @@ class _SignUpPageState extends State<SignUpPage> {
         automaticallyImplyLeading: false,
         title: const Text("Sign up"),
       ),
-      body: ListView(
-        children:[ Container(
+      body: ListView(children: [
+        Container(
           alignment: Alignment.center,
           padding: const EdgeInsets.all(16),
           child: Column(
@@ -47,13 +45,12 @@ class _SignUpPageState extends State<SignUpPage> {
             children: [
               InputField(
                 labelText: "Name",
-                  controller: userNameController,
-                  obcecureText: _show,
+                controller: userNameController,
+                obcecureText: _show,
               ),
               const SizedBox(
                 height: 15,
               ),
-
               InputField(
                 labelText: "Roll",
                 controller: userRollController,
@@ -63,43 +60,39 @@ class _SignUpPageState extends State<SignUpPage> {
               const SizedBox(
                 height: 15,
               ),
-
               InputField(
                   labelText: "Registration",
                   controller: userRegController,
                   obcecureText: _show,
-                  inputType: TextInputType.number
-              ),
+                  inputType: TextInputType.number),
               const SizedBox(
                 height: 15,
               ),
-
               InputField(
                   labelText: "Phone",
                   controller: userPhoneController,
                   obcecureText: _show,
-                  inputType: TextInputType.number
-              ),
+                  inputType: TextInputType.number),
               const SizedBox(
                 height: 15,
               ),
-
               InputField(
-                  labelText: "Password",
-                  controller: userPasswordController,
-                  obcecureText: !_show,
-                  inputType: TextInputType.number
+                labelText: "Password",
+                controller: userPasswordController,
+                obcecureText: !_show,
               ),
               const SizedBox(
                 height: 15,
               ),
-
-              EleButton(buttonName: "Sign Up", buttonWork: (){ ButtonPress(); })
+              EleButton(
+                  buttonName: "Sign Up",
+                  buttonWork: () {
+                    ButtonPress();
+                  })
             ],
           ),
         ),
-      ]
-      ),
+      ]),
     );
   }
 }
