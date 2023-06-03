@@ -51,7 +51,7 @@ class _LogInPageState extends State<LogInPage> {
               obcecureText: _show,
               controller: passwordController,
               passwordIcon: IconButton(
-                icon: Icon(Icons.remove_red_eye),
+                icon: const Icon(Icons.remove_red_eye) ,
                 onPressed: (){
                   setState(() {
                     _show = !_show;
@@ -68,6 +68,17 @@ class _LogInPageState extends State<LogInPage> {
               buttonWork: (){
                 ButtonPress();
               },
+            ),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('don\'t have an account?'),
+
+                TextButton(onPressed: (){
+                  Navigator.of(context).pushNamed('/signup');
+                }, child: Text('Sign Up'))
+              ],
             )
 
           ],

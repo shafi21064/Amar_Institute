@@ -101,7 +101,7 @@ class _HomePageState extends State<HomePage> {
                         //primary: false,
                         children: [
                           CardButton(
-                            imageIcon: 'assets/images/icon_a.png',
+                            imageIcon: 'assets/images/icon_academic.png',
                             textInfo: 'Academic info.',
                           ),
                           CardButton(

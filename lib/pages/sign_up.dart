@@ -33,12 +33,14 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Sign up.."),
+        centerTitle: false,
+        automaticallyImplyLeading: false,
+        title: const Text("Sign up"),
       ),
       body: ListView(
         children:[ Container(
           alignment: Alignment.center,
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -48,7 +50,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   controller: userNameController,
                   obcecureText: _show,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
 
@@ -58,7 +60,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 obcecureText: _show,
                 inputType: TextInputType.number,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
 
@@ -68,7 +70,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   obcecureText: _show,
                   inputType: TextInputType.number
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
 
@@ -78,7 +80,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   obcecureText: _show,
                   inputType: TextInputType.number
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
 
@@ -88,7 +90,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   obcecureText: !_show,
                   inputType: TextInputType.number
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
 

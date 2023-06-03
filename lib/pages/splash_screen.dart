@@ -27,8 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: Image(
           fit: BoxFit.cover,
-          image: NetworkImage(
-              'https://vectorforfree.com/wp-content/uploads/2020/05/Reading_Book_VectorForFree.jpg'),
+          image: AssetImage('assets/images/splash.png')
         ),
       ),
     );

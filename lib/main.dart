@@ -27,9 +27,12 @@ class _MyAppState extends State<MyApp> {
       title:"Amar Institute",
 
       routes:  {
-        '/' : (context) => SplashScreen(),
-        '/login' : (context) => LogInPage(),
-        '/home': (context) => HomePage()
+        '/' : (context) => const SplashScreen(),
+        '/home': (context) => const HomePage(),
+        '/login' : (context) => const LogInPage(),
+        '/signup' : (context) => const SignUpPage(),
+
+
       },
     );
   }
