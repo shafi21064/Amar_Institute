@@ -2,27 +2,21 @@ import 'package:amar_institute/widgets/ele_button.dart';
 import 'package:amar_institute/widgets/input_field.dart';
 import 'package:flutter/material.dart';
 
-class SignUpPage extends StatefulWidget {
-  const SignUpPage({Key? key}) : super(key: key);
+class SignUpTeacher extends StatelessWidget {
+   SignUpTeacher({super.key});
 
-  @override
-  State<SignUpPage> createState() => _SignUpPageState();
-}
-
-class _SignUpPageState extends State<SignUpPage> {
   void ButtonPress() {
     print(userNameController.text);
-    print(userRollController.text);
-    print(userRegController.text);
+    print(userDepartmentController.text);
+    print(userPositionController.text);
     print(userPhoneController.text);
     print(userPasswordController.text);
     print("change");
   }
 
   final userNameController = TextEditingController();
-  final departmentController = TextEditingController();
-  final userRollController = TextEditingController();
-  final userRegController = TextEditingController();
+  final userDepartmentController = TextEditingController();
+  final userPositionController = TextEditingController();
   final userPhoneController = TextEditingController();
   final userPasswordController = TextEditingController();
 
@@ -36,8 +30,8 @@ class _SignUpPageState extends State<SignUpPage> {
         automaticallyImplyLeading: false,
         title: const Text("Sign up"),
       ),
-      body: ListView(children: [
-        Container(
+      body: SingleChildScrollView(
+        child: Container(
           alignment: Alignment.center,
           padding: const EdgeInsets.all(16),
           child: Column(
@@ -54,26 +48,18 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
               InputField(
                 labelText: "Department",
-                controller: userNameController,
+                controller: userDepartmentController,
                 obcecureText: _show,
               ),
               const SizedBox(
                 height: 15,
               ),
               InputField(
-                labelText: "Roll",
-                controller: userRollController,
+                labelText: "Position",
+                controller: userPositionController,
                 obcecureText: _show,
                 inputType: TextInputType.number,
               ),
-              const SizedBox(
-                height: 15,
-              ),
-              InputField(
-                  labelText: "Registration",
-                  controller: userRegController,
-                  obcecureText: _show,
-                  inputType: TextInputType.number),
               const SizedBox(
                 height: 15,
               ),
@@ -101,7 +87,7 @@ class _SignUpPageState extends State<SignUpPage> {
             ],
           ),
         ),
-      ]),
+      ),
     );
   }
 }

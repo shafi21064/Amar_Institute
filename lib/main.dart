@@ -2,6 +2,7 @@ import 'package:amar_institute/pages/home.dart';
 import 'package:amar_institute/pages/home_test.dart';
 import 'package:amar_institute/pages/log_in.dart';
 import 'package:amar_institute/pages/sign_up.dart';
+import 'package:amar_institute/pages/sign_up_teacher.dart';
 import 'package:amar_institute/pages/splash_screen.dart';
 import 'package:amar_institute/pages/user_type_select.dart';
 import 'package:amar_institute/pages/welcome.dart';
@@ -26,7 +27,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title:"Amar Institute",
-      home: UserTypeScreen(),
+      home: SignUpTeacher(),
 
       // routes:  {
       //   '/' : (context) => const SplashScreen(),
