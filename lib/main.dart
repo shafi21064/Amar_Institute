@@ -27,14 +27,15 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title:"Amar Institute",
-      home: SignUpTeacher(),
+      // home: SignUpTeacher(),
 
-      // routes:  {
-      //   '/' : (context) => const SplashScreen(),
-      //   '/home': (context) => const HomePage(),
-      //   '/login' : (context) => const LogInPage(),
-      //   '/signup' : (context) => const SignUpPage(),
-      // },
+      routes:  {
+        '/' : (context) => const SplashScreen(),
+        '/home': (context) => const HomePage(),
+        '/login' : (context) => const LogInPage(),
+        '/signup' : (context) => const SignUpPage(),
+        '/userType' : (context) => const UserTypeScreen(),
+      },
     );
   }
 }

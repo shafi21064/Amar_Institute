@@ -73,11 +73,11 @@ class _LogInPageState extends State<LogInPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('don\'t have an account?'),
+                const Text('don\'t have an account?'),
 
                 TextButton(onPressed: (){
-                  Navigator.of(context).pushNamed('/signup');
-                }, child: Text('Sign Up'))
+                  Navigator.of(context).pushNamed('/userType');
+                }, child: const Text('Sign Up'))
               ],
             )
 
