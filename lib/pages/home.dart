@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../widgets/card_button.dart';
 
@@ -10,10 +11,28 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
   var textStyle = const TextStyle(
     color: Colors.white,
     fontSize: 13,
   );
+
+  String userName = '';
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    loadData();
+  }
+
+  void loadData() async {
+    SharedPreferences sp = await SharedPreferences.getInstance();
+    userName = sp.getString('userName') ?? '';
+    setState(() {
+
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -39,52 +58,67 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const Row(
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        CircleAvatar(
-                          radius: 40,
-                          backgroundImage:
-                              AssetImage('assets/images/download.png'),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                        Row(
                           children: [
-                            Text(
-                              'Md Shadikul Islam Shafi',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold),
+                            const CircleAvatar(
+                              radius: 40,
+                              backgroundImage:
+                                  AssetImage('assets/images/download.png'),
                             ),
-                            Text(
-                              '7th sem (2nd shift)',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 13,
-                                //fontWeight: FontWeight.bold
-                              ),
+                            const SizedBox(
+                              width: 10,
                             ),
-                            Text(
-                              'Computer Technology',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 12,
-                                //fontWeight: FontWeight.bold
-                              ),
-                            ),
-                            Text(
-                              '114097',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 12,
-                                //fontWeight: FontWeight.bold
-                              ),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  userName,
+                                  style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                const Text(
+                                  '7th sem (2nd shift)',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 13,
+                                    //fontWeight: FontWeight.bold
+                                  ),
+                                ),
+                                const Text(
+                                  'Computer Technology',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 12,
+                                    //fontWeight: FontWeight.bold
+                                  ),
+                                ),
+                                const Text(
+                                  '114097',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 12,
+                                    //fontWeight: FontWeight.bold
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
+                        ),
+                        FloatingActionButton(
+                          backgroundColor: Colors.blue.withOpacity(.5),
+                          onPressed: () async {
+                            SharedPreferences sp = await SharedPreferences.getInstance();
+                            sp.clear();
+
+                            Navigator.of(context).pushReplacementNamed('/login');
+                          },
+                          child: const Icon(Icons.logout),
                         )
                       ],
                     ),

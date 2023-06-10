@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:amar_institute/pages/log_in.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -16,9 +17,23 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(const Duration(seconds: 3), () {
+    isLogin();
+  }
+
+  void isLogin() async {
+    SharedPreferences sp = await SharedPreferences.getInstance();
+
+    bool isLogin = sp.getBool('login') ?? false;
+
+    if (isLogin) {
+      Timer(const Duration(seconds: 3), () {
+        Navigator.of(context).pushReplacementNamed('/home');
+      });
+    } else {
+      Timer(const Duration(seconds: 3), () {
       Navigator.of(context).pushReplacementNamed('/login');
     });
+    }
   }
 
   @override

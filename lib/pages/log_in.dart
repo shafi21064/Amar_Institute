@@ -1,6 +1,7 @@
 import 'package:amar_institute/widgets/ele_button.dart';
 import 'package:amar_institute/widgets/input_field.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LogInPage extends StatefulWidget {
 
@@ -11,9 +12,12 @@ class LogInPage extends StatefulWidget {
 }
 class _LogInPageState extends State<LogInPage> {
 
-  void ButtonPress(){
-    print(userController.text);
-    print(passwordController.text);
+  void LoginButton() async {
+
+    SharedPreferences sp = await SharedPreferences.getInstance();
+    sp.setString('userName', userController.text.toString());
+    sp.setBool('login', true);
+
     Navigator.of(context).pushReplacementNamed('/home');
   }
 
@@ -66,7 +70,7 @@ class _LogInPageState extends State<LogInPage> {
             EleButton(
               buttonName: "Log In",
               buttonWork: (){
-                ButtonPress();
+                LoginButton();
               },
             ),
 
@@ -76,7 +80,7 @@ class _LogInPageState extends State<LogInPage> {
                 const Text('don\'t have an account?'),
 
                 TextButton(onPressed: (){
-                  Navigator.of(context).pushNamed('/userType');
+                  Navigator.of(context).pushNamed('/signup');
                 }, child: const Text('Sign Up'))
               ],
             )

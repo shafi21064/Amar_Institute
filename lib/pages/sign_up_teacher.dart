@@ -20,7 +20,7 @@ class SignUpTeacher extends StatelessWidget {
   final userPhoneController = TextEditingController();
   final userPasswordController = TextEditingController();
 
-  bool _show = false;
+  final bool _show = false;
 
   @override
   Widget build(BuildContext context) {
